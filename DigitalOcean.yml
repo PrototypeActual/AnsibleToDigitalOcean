@@ -1,0 +1,10 @@
+---
+- hosts: do
+  tasks:
+  - name: Ensure SSH key exists
+    community.digitalocean.digital_ocean:
+      state: present
+      command: ssh
+      name: my_ssh_key
+      ssh_pub_key: '.ssh/id_rsa'
+      api_token: 
